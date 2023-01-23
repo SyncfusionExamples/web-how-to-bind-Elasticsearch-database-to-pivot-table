@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@Html.EJS().PivotView("PivotView").Height("300").DataSourceSettings(
+        dataSource => dataSource.Url("https://localhost:7105/Elasticsearch"
+    )).ExpandAll(false).EnableSorting(true
+    ).Columns(columns =>
+    {
+        columns.Name("State").Add();
+    }).Rows(rows =>
+    {
+        rows.Name("Location").Add();
+        rows.Name("Rainfall").Add();
+    }).Values(values =>
+    {
+        values.Name("Wind Speed").Add();
+        values.Name("Min Temperature").Add();
+        values.Name("Max Temperature").Add();
+    }).ShowFieldList(true).Render()
