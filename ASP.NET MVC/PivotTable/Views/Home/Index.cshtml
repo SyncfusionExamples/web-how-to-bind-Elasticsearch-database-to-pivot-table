@@ -4,7 +4,7 @@
 
 @Html.EJS().PivotView("PivotView").Height("300").DataSourceSettings(
         dataSource => dataSource.Url("https://localhost:7105/Elasticsearch"
-    )).ExpandAll(false).EnableSorting(true
+    ).ExpandAll(false).EnableSorting(true
     ).Columns(columns =>
     {
         columns.Name("State").Add();
@@ -17,4 +17,4 @@
         values.Name("Wind Speed").Add();
         values.Name("Min Temperature").Add();
         values.Name("Max Temperature").Add();
-    }).ShowFieldList(true).Render()
+    })).ShowFieldList(true).Render()
