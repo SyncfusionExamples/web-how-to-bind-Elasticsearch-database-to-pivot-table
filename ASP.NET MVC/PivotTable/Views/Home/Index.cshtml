@@ -3,7 +3,7 @@
 }
 
 @Html.EJS().PivotView("PivotView").Height("300").DataSourceSettings(
-        dataSource => dataSource.Url("https://localhost:7105/Elasticsearch"
+        dataSource => dataSource.Url("https://localhost:7105/Pivot"
     ).ExpandAll(false).EnableSorting(true
     ).Columns(columns =>
     {
