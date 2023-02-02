@@ -1,35 +1,20 @@
-# How to bind Elasticsearch database to Pivot-table
+# How to bind Elasticsearch database to a Pivot Table
 
-## Introduction
-
-A quick start javascript project that shows how to bind Elasticsearch Database to Javascript Pivot Table. This project contains an client-side javascript sample for Syncfusion pivot table.
+A quick start project for connecting a Elasticsearch database to a Syncfusion Pivot Table. This repository includes a Web API Controller (PivotController) for retrieving data from a Elasticsearch database, as well as a quick start sample for the JavaScript platform that displays the retrieved data in a Pivot Table.
 
 **Documentation:** https://ej2.syncfusion.com/javascript/documentation/pivotview/getting-started/
 
-## Prerequesties
+## Project prerequisites
 
-To get started, Make sure that the following software to be installed in the machine.
+Before beginning work on the server and client projects, ensure the following software to be installed in the machine.
 
-* `git`.
-* `Visual Studio Code` (optional).
-* `Visual Studio 2022` (optional).
+* [git](https://git-scm.com/downloads)
+* [Node.js](https://nodejs.org/en/)
+* [Visual Studio Code](https://code.visualstudio.com/)
+* Compatible versions of [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/ ) and [.NET Core SDK 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) or later installed on your machine
 
-## Guide to download and run sample
+## How to run this application?
 
-Need to run the application. To do so,
+* To run this application, clone the `how-to-bind-Elasticsearch-database-to-pivot-table` repository and then open **PivotController** in Visual Studio 2022. Simply build and run your project in IIS Express, and it will host and display the URL `https://localhost:7105`.
 
-* Clone the [`How-to-bind-Elasticsearch-database-to-pivot-table`](https://github.com/SyncfusionExamples/how-to-bind-Elasticsearch-database-to-pivot-table) repository (or)
-
-* Open the command prompt and run the command below,
-
-```sh
-git clone https://github.com/SyncfusionExamples/how-to-bind-Elasticsearch-database-to-pivot-table.git
-```
-
-* Once done with downloading, Then navigate to the path where it has been stored in your system.
-
-Now follows the steps one after the other:
-
-* Run the **PivotController** Core Api (server-side) application.
-* Navigate to Syncfusion Pivot Table sample for Javascript.
-* In the javascript pivot-table (client-side) sample, Open the `index.html` file in browser page.
+*  Now open JavaScript sample in Visual Studio Code and Initialize the Pivot Table, map the hosted URL, prepare and add a pivot report, and finally, open the 'index.html' file in your browser to run your project.
