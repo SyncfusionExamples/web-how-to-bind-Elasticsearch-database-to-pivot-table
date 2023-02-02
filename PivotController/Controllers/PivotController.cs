@@ -1,0 +1,30 @@
+using Microsoft.AspNetCore.Mvc;
+using Nest;
+using Newtonsoft.Json;
+
+namespace PivotController.Controllers
+{
+    [ApiController]
+    [Route("[controller]")]
+    public class PivotController : ControllerBase
+    {
+        [HttpGet(Name = "GetElasticSearchData")]
+        public object Get()
+        {
+            return JsonConvert.SerializeObject(FetchElasticsearchData());
+        }
+
+        private static object FetchElasticsearchData()
+        {
+            var connectionString = "https://bi.syncfusion.com:9200";
+            var uri = new Uri(connectionString);
+            var connectionSettings = new ConnectionSettings(uri);
+            var client = new ElasticClient(connectionSettings);            
+            var searchResponse = client.Search<object>(s => s
+                .Index("australian_weather")
+                .Size(1000)
+            );
+            return searchResponse.Documents;
+        }
+    }
+}
