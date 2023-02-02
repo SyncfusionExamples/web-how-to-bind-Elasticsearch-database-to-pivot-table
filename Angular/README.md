@@ -1,45 +1,31 @@
-# How to bind Elasticsearch database to Pivot-table
+# How to bind Elasticsearch database to a Pivot Table
 
-## Introduction
-
-A quick start Angular project that shows how to bind SQL Database to Angular Pivot Table. This project contains an client-side Angular sample for syncfusion pivot table.
+A quick start project for connecting a Elasticsearch database to a Syncfusion Pivot Table. This repository includes a Web API Controller (PivotController) for retrieving data from a Elasticsearch database, as well as a quick start sample for the Angular platform that displays the retrieved data in a Pivot Table.
 
 **Documentation:** https://ej2.syncfusion.com/angular/documentation/pivotview/getting-started/
 
-## Prerequesties
+## Project prerequisites
 
-To get started, Make sure that the following software to be installed in the machine.
+Before beginning work on the server and client projects, ensure the following software to be installed in the machine.
 
-* `git`.
-* `Node.js`.
-* `Visual Studio Code` (optional).
-* `Visual Studio 2022` (optional).
+* [git](https://git-scm.com/downloads)
+* [Node.js](https://nodejs.org/en/)
+* [Angular](https://angularjs.org/)
+* [Visual Studio Code](https://code.visualstudio.com/)
+* Compatible versions of [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/ ) and [.NET Core SDK 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) or later installed on your machine.
 
-The compatible versions of Angular should be `6+`.
+## How to run this application?
 
-## Guide to download and run sample
+* To run this application, clone the `how-to-bind-Elasticsearch-database-to-pivot-table` repository and then open **PivotController** in Visual Studio 2022. Simply build and run your project in IIS Express, and it will host and display the URL `https://localhost:7105`.
 
-Need to run the application. To do so,
+*  Now open Angular sample in Visual Studio Code and and install the necessary npm packages using the following command.
 
-* Clone the [`How-to-bind-Elasticsearch-database-to-pivot-table`](https://github.com/SyncfusionExamples/how-to-bind-Elasticsearch-database-to-pivot-table) repository (or)
-
-* Open the command prompt and run the command below,
-
-```sh
-git clone https://github.com/SyncfusionExamples/how-to-bind-Elasticsearch-database-to-pivot-table.git
-```
-
-* Once done with downloading, Then navigate to the path where it has been stored in your system.
-
-Now follows the steps one after the other:
-
-* Run the **PivotController** Core Api (Server-side) application.
-* Navigate to Syncfusion Pivot Table sample for Angular.
-* In the anguar pivot-table (client-side) sample, Run the below command to install the NPM packages.
 ```sh
 npm install
 ```
-* Once done installation, Run the next command.
+
+* Initialize the Pivot Table, map the hosted URL, prepare and add a pivot report, and finally run your project using the following command to achieve the desired result.
+
 ```sh
 ng serve --open
 ```
