@@ -16,7 +16,7 @@ namespace PivotController.Controllers
 
         private static object FetchElasticsearchData()
         {
-            var connectionString = "https://bi.syncfusion.com:9200";
+            var connectionString = "<Enter your valid connection string here>";
             var uri = new Uri(connectionString);
             var connectionSettings = new ConnectionSettings(uri);
             var client = new ElasticClient(connectionSettings);            
