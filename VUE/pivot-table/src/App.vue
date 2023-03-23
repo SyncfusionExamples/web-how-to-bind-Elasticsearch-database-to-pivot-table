@@ -25,7 +25,7 @@ export default {
   data() {
     return {
       dataSourceSettings: {
-        url: 'https://localhost:7105/Pivot',
+        url: 'https://localhost:7071/Pivot',
         enableSorting: true,
         expandAll: false,
         dataSource: [],

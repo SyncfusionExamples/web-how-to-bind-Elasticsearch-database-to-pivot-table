@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Nest;
 using Newtonsoft.Json;
 
-namespace PivotController.Controllers
+namespace MyWebService.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -19,7 +19,7 @@ namespace PivotController.Controllers
             var connectionString = "<Enter your valid connection string here>";
             var uri = new Uri(connectionString);
             var connectionSettings = new ConnectionSettings(uri);
-            var client = new ElasticClient(connectionSettings);            
+            var client = new ElasticClient(connectionSettings);
             var searchResponse = client.Search<object>(s => s
                 .Index("australian_weather")
                 .Size(1000)
