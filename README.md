@@ -1,3 +1,3 @@
-# How to bind Elasticsearch database to Pivot-table
+# How to bind Elasticsearch database to a Pivot Table
 
-A quick start project that shows how to bind Elasticsearch database to the Syncfusion pivot table.
+A quick start project for connecting a Elasticsearch database to a Syncfusion Pivot Table. This repository includes a Web API Controller ([MyWebService](./MyWebService/)) for retrieving data from a Elasticsearch database, as well as a quick start samples in the [TypeScript](./Typescript/), [JavaScript](./Javascript/), [Angular](./Angular/), [React](./React/), [VUE](./VUE/), ASP.NET [Core](./Core/) and [MVC](./MVC/) platforms that display the retrieved data in a Syncfusion Pivot Table.

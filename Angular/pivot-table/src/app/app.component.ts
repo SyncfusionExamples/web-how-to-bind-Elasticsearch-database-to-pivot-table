@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
     ngOnInit(): void {
 
         this.dataSourceSettings = {
-          url: 'https://localhost:7105/Pivot',
+          url: 'https://localhost:44323/Pivot',
           enableSorting: true,
           expandAll: false,
           dataSource: [],

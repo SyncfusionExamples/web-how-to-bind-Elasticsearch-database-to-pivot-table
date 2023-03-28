@@ -4,7 +4,7 @@ import './App.css';
 
 function App() {
   let dataSourceSettings = {
-    url: 'https://localhost:7105/Pivot',
+    url: 'https://localhost:44323/Pivot',
     enableSorting: true,
     expandAll: false,
     dataSource: [],
