@@ -1,0 +1,60 @@
+﻿@page "/"
+@using System.Data
+@using Newtonsoft.Json
+@using Newtonsoft.Json.Linq
+@using Nest
+@using Syncfusion.Blazor.PivotView
+
+<SfPivotView TValue="ElasticSearchService" Width="1000" Height="300" ShowFieldList="true">
+    <PivotViewDataSourceSettings TValue="ElasticSearchService" DataSource="dataList" ExpandAll=false EnableSorting=true>
+        <PivotViewColumns>
+            <PivotViewColumn Name="Product"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Date"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C2"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+</SfPivotView>
+
+@code {
+
+    private static List<ElasticSearchService> dataList = new List<ElasticSearchService>();
+
+    protected override void OnInitialized()
+    {
+        var connectionString = "<Enter your valid connection string here>";
+        var uri = new Uri(connectionString);
+        var connectionSettings = new ConnectionSettings(uri);
+        var client = new ElasticClient(connectionSettings);
+        var searchResponse = client.Search<object>(s => s
+            .Index("your_index")
+            .Size(1000)
+        );
+        var serializer = new JsonSerializer();
+        foreach (var hit in searchResponse.Hits)
+        {
+            var source = hit.Source;
+            JToken sourceToken = JToken.FromObject(source);
+            using (var reader = new JTokenReader(sourceToken))
+            {
+                ElasticSearchService elasticResult = serializer.Deserialize<ElasticSearchService>(reader);
+                dataList.Add(elasticResult);
+            }
+        }
+    }
+
+    public class ElasticSearchService
+    {
+        public int Quantity { get; set; }
+        public string Product { get; set; }
+        public string Date { get; set; }
+        public string Country { get; set; }
+        public double Amount { get; set; }
+    }
+}
