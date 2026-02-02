@@ -9,8 +9,8 @@
   <ItemGroup>
     <PackageReference Include="NEST" Version="7.17.5" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="Syncfusion.Blazor.PivotTable" Version="21.1.35" />
-    <PackageReference Include="Syncfusion.Blazor.Themes" Version="21.1.35" />
+    <PackageReference Include="Syncfusion.Blazor.PivotTable" Version="32.1.19" />
+    <PackageReference Include="Syncfusion.Blazor.Themes" Version="32.1.19" />
   </ItemGroup>
 
 </Project>
